@@ -1,3 +1,5 @@
-numpy
 torch
-tqdm
+torchaudio
+transformers
+accelerate
+scipy

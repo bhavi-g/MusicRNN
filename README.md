@@ -1,17 +1,25 @@
-# MusicRNN — Character‑level LSTM (ABC‑style)
+# 🎵 PunjabiGen — AI-Generated Bhangra & Punjabi Beats
 
-A compact, modular character‑level LSTM that learns on simple ABC‑style sequences.
-The repo includes:
-- `src/main.py` — quick smoke test that runs a forward/backward step on a tiny toy corpus.
-- `notebooks/exploration.ipynb` — exploration notebook (original work used for reference).
+PunjabiGen generates brand-new Punjabi-style instrumentals (dhol, tumbi riffs, synths, claps) using Meta’s MusicGen via Hugging Face Transformers.
 
-## Quick start
-```bash
+## Quickstart
+
+<pre>
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python src/main.py
-## Notes
-- The quickcheck uses an inline toy corpus (no external downloads), so it runs fast and offline.
-- You can extend `src/main.py` to load a real ABC dataset later.
-- The notebook is included only as exploration; the runnable entrypoint is `src/main.py`.
+python generate_track.py --prompt "High-energy Punjabi wedding bhangra with loud dhol, tumbi riffs, bright synth, claps, 132 BPM" --seconds 30 --temp 1.2 --seed 123 --wav_out chorus.wav
+ffmpeg -y -i chorus.wav -ar 44100 -b:a 192k chorus.mp3
+</pre>
+
+## Features
+- Text-to-music prompts
+- Adjustable duration, temperature, seed
+- WAV output (MP3 via ffmpeg)
+
+## Requirements
+- Python 3.9+
+- ffmpeg for MP3 conversion (optional)
+
+## License
+MIT
