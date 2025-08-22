@@ -1,0 +1,7 @@
+numpy
+torch
+tqdm
+scipy
+mitdeeplearning
+jupyter
+matplotlib

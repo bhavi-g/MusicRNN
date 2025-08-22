@@ -9,3 +9,12 @@ training_checkpoints/
 
 # Ignore raw notebooks
 *.ipynb
+/.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pt
+*.ckpt
+classical_rnn/out/
+punjabi_gen/examples/
+.matplotlib/
